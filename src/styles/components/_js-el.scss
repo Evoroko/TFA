@@ -1,0 +1,35 @@
+.btn{
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    width: 50px;
+    height: 26px;
+    background-color: var(--color-text);
+    border: none;
+	overflow: hidden;
+    border-radius: 50px;
+    z-index: 2;
+}
+
+.btn__txt{
+	position: absolute;
+	white-space: nowrap;
+	text-indent: 100%;
+}
+
+.btn--ball{
+    width: 22px;
+    height: 22px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    transition: .2s ease-in-out;
+}
+
+.btn--ballDark{
+    background-color: rgb(0, 0, 0);
+    left: 27px;
+    transition: .2s ease-in-out;
+}
