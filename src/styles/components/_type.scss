@@ -46,5 +46,26 @@
     &--left{
         text-align: left;
     }
+
+    &__slide{
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: 72px;
+        padding-top: 90px;
+
+        &--chat{
+            background-image: url(../../assets/images/title_chat.svg);
+        }
+
+        &--custom{
+            background-image: url(../../assets/images/title_custom.svg);
+        }
+
+        &--review{
+            background-image: url(../../assets/images/title_review.svg);
+        }
+
+    }
+    
 }
 
