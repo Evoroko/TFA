@@ -66,5 +66,21 @@
 }
 
 .section{
-    padding: 36px;
+    padding: 0 36px;
+
+    &__el{
+        margin-bottom: 18px;
+    }
+}
+
+.gallery{
+    height: 80vh;
+    width: 100%;
+    background-image: url(../assets/images/gallery@1x.webp);
+    background-size: cover;
+    background-position: center;
+
+    @media (device-pixel-ratio: 2) {
+        background-image: url(../assets/images/gallery@2x.webp);
+    }
 }

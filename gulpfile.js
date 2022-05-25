@@ -90,7 +90,8 @@ const watchFiles = (done) => {
         "./src/assets/images/**/*.jpg",
         "./src/assets/images/**/*.png",
         "./src/assets/images/**/*.gif",
-        "./src/assets/images/**/*.svg"
+        "./src/assets/images/**/*.svg",
+        "./src/assets/images/**/*.webp"
     ], compressImages);
     gulp.watch("./src/*.html", gulp.series(html, browserReload));
 
@@ -123,7 +124,8 @@ const compressImages = (done) => {
         "./src/assets/images/**/*.jpg",
         "./src/assets/images/**/*.png",
         "./src/assets/images/**/*.gif",
-        "./src/assets/images/**/*.svg"
+        "./src/assets/images/**/*.svg",
+        "./src/assets/images/**/*.webp"
     ])
 
     if (useImageOptim) {
