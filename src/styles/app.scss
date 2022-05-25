@@ -190,3 +190,23 @@ border-radius: 15px;
         }
     }
 }
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    text-align: center;
+
+    &__el{
+        margin-bottom: 18px;
+    }
+
+    a{
+        color: var(--c-third);
+    }
+}
+
+.linkList{
+    display: flex;
+    justify-content: space-between;
+}
