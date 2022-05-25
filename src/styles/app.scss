@@ -20,6 +20,10 @@ li{
     list-style-type: none;
 }
 
+a{
+    text-decoration: none;
+}
+
 .body{
     background-color: var(--c-bg);
 }
@@ -167,22 +171,22 @@ background-color: var(--c-primary);
 padding: 36px;
 border-radius: 15px;
 
-&__img{
-    padding-top: 90px;
-    background-repeat: no-repeat;
-    background-size: 72px;
-    background-position: top center;
+    &__img{
+        padding-top: 90px;
+        background-repeat: no-repeat;
+        background-size: 72px;
+        background-position: top center;
 
-    &--tasu{
-        background-image: url(../assets/images/opinion__tasu.png);
-    }
+        &--tasu{
+            background-image: url(../assets/images/opinion__tasu.png);
+        }
 
-    &--amavocado{
-        background-image: url(../assets/images/opinion__amavocado.png);
-    }
+        &--amavocado{
+            background-image: url(../assets/images/opinion__amavocado.png);
+        }
 
-    &--rener{
-        background-image: url(../assets/images/opinion__rener.png);
+        &--rener{
+            background-image: url(../assets/images/opinion__rener.png);
+        }
     }
-}
 }
