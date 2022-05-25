@@ -11,6 +11,15 @@
     margin: 0;
 }
 
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
 .body{
     background-color: var(--c-bg);
 }
@@ -63,9 +72,14 @@
 	    text-indent: 100%;
         overflow: hidden;
     }
+
+    &--last{
+        padding: 24px;
+        background-position: center;
+    }
 }
 
-.section{
+.content{
     padding: 0 36px;
 
     &__el{
@@ -77,15 +91,62 @@
     }
 
     &__sec{
-        margin-bottom: 72px;
+        margin-bottom: 36px;
     }
 
     &__img{
-        background-color: var(--c-primary);
+        display: block;
+        margin: auto;
+        max-width: 60%;
 
         img{
+            width: 100%;
+            background-color: var(--c-primary);
             display: block; /* Prevents the <picture> from having a strange space */
+            border: solid 2px var(--c-primary);
+            border-radius: 15px;
         }
+
+        &--full{
+            max-width: 100%;
+        }
+    }
+
+    &--purple{
+        padding: 18px 36px;
+        margin-bottom: 0;
+    }
+
+    &--spacetop{
+        margin-top: 36px;
+    }
+}
+
+.section{
+    margin-bottom: 72px;
+}
+
+
+.purple{
+    background-color: var(--c-primary);
+
+    &::before, &::after{
+        content: "";
+        display: block;
+        background-color: var(--c-bg);
+        background-image: url(../assets/images/pattern.png);
+        background-size: contain;
+        background-repeat: repeat-x;
+        padding: 18px;
+        width: 100%;
+    }
+
+    &::after{
+        background-image: url(../assets/images/pattern2.png);
+    }
+
+    &--dl{
+        padding: 72px 18px;
     }
 }
 
@@ -99,4 +160,29 @@
     @media (device-pixel-ratio: 2) {
         background-image: url(../assets/images/gallery@2x.webp);
     }
+}
+
+.review{
+background-color: var(--c-primary);
+padding: 36px;
+border-radius: 15px;
+
+&__img{
+    padding-top: 90px;
+    background-repeat: no-repeat;
+    background-size: 72px;
+    background-position: top center;
+
+    &--tasu{
+        background-image: url(../assets/images/opinion__tasu.png);
+    }
+
+    &--amavocado{
+        background-image: url(../assets/images/opinion__amavocado.png);
+    }
+
+    &--rener{
+        background-image: url(../assets/images/opinion__rener.png);
+    }
+}
 }
