@@ -1,10 +1,12 @@
+@use '../utils/variables' as v;
+
 .btn{
     position: fixed;
-    bottom: 20px;
+    top: 20px;
     right: 10px;
     width: 50px;
     height: 26px;
-    background-color: var(--color-text);
+    background-color: var(--c-text);
     border: none;
 	overflow: hidden;
     border-radius: 50px;
@@ -20,7 +22,7 @@
 .btn--ball{
     width: 22px;
     height: 22px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
     position: absolute;
     top: 2px;
     left: 2px;
@@ -29,7 +31,7 @@
 }
 
 .btn--ballDark{
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     left: 27px;
     transition: .2s ease-in-out;
 }

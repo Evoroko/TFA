@@ -34,7 +34,7 @@
     background-size: cover;
     background-position: 70% center;
     background-image: url(../assets/images/cover@1x.jpg);
-    padding: 18px;
+    padding: 36px 36px 72px ;
 
     @media (device-pixel-ratio: 2) {
         background-image: url(../assets/images/cover@2x.jpg);
@@ -54,7 +54,7 @@
     background-size: contain;
     display: inline-block;
     width: 100%;
-    padding: 32px 0px;
+    padding: 36px 0px;
     background-image: url(../assets/images/dl.svg);
 
     &--txt{
@@ -63,5 +63,8 @@
 	    text-indent: 100%;
         overflow: hidden;
     }
+}
 
+.section{
+    padding: 36px;
 }
