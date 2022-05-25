@@ -79,6 +79,14 @@
     &__sec{
         margin-bottom: 72px;
     }
+
+    &__img{
+        background-color: var(--c-primary);
+
+        img{
+            display: block; /* Prevents the <picture> from having a strange space */
+        }
+    }
 }
 
 .gallery{
