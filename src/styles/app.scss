@@ -68,12 +68,15 @@ a{
     padding: 0 36px;
 
     &__el{
-        margin: auto;
-        margin-bottom: 18px;
+        margin: 0 auto 18px auto;
         max-width: 100ch;
 
         &--center{
             text-align: center;
+        }
+
+        &--top{
+            margin: 0 0 18px 0;
         }
     }
 
@@ -112,21 +115,14 @@ a{
     &--top{
         
         height: 100vh;
-        background-size: cover;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
         background-position: 70% top;
         background-image: url(../assets/images/cover@1x.jpg);
         padding: 36px 36px 72px;
 
         @media (device-pixel-ratio: 2) {
             background-image: url(../assets/images/cover@2x.jpg);
-        }
-
-        @media (min-width: 768px){
-            color: red;
-        }
-
-        @media (min-width: 992px){
-            color: green;
         }
 
         display: flex;
@@ -200,15 +196,13 @@ a{
 
     @media (min-width: 996px){
 
+        &::before, &::after
+
         &__txt{
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-
-            *{
-                margin: 0;
-            }
         }
     }
 }
@@ -267,6 +261,15 @@ a{
 
     a{
         color: var(--c-third);
+    }
+
+    @media (min-width: 992px){
+        flex-direction: row;
+        justify-content: space-between;
+
+        &__el{
+            margin-bottom: 0;
+        }
     }
 }
 
