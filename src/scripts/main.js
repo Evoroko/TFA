@@ -1,3 +1,12 @@
+// Date copyright
+
+let date = new Date();
+let year = date.getFullYear();
+
+let yr = document.querySelector("#year");
+yr.innerText = year;
+
+
 // Dark Theme persistant
 
 const darkTheme = document.querySelector("#theme");
