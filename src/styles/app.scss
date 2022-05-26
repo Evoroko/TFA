@@ -141,6 +141,10 @@ a{
 }
 
 @media(min-width: 992px){
+    .wrap{
+        overflow-x: hidden;
+    }
+
     .horizontal{
         display: flex;
         width: 300vw;
