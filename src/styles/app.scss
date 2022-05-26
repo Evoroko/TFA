@@ -1,6 +1,7 @@
 @use 'utils/variables';
 @use 'components/type';
 @use 'components/js-el';
+@use 'components/grid';
 
 
 @import '../../node_modules/modern-normalize/modern-normalize';
@@ -47,7 +48,7 @@ a{
     background-size: contain;
     display: inline-block;
     width: 100%;
-    padding: 36px 0px;
+    padding: 27px 0px;
     background-image: url(../assets/images/dl.svg);
 
     &--txt{
@@ -67,7 +68,9 @@ a{
     padding: 0 36px;
 
     &__el{
+        margin: auto;
         margin-bottom: 18px;
+        max-width: 100ch;
 
         &--center{
             text-align: center;
@@ -81,7 +84,7 @@ a{
     &__img{
         display: block;
         margin: auto;
-        max-width: 60%;
+        max-width: 240px;
 
         img{
             width: 100%;
@@ -92,7 +95,8 @@ a{
         }
 
         &--full{
-            max-width: 100%;
+            width: 100%;
+            max-width: 400px;
         }
     }
 
@@ -110,15 +114,19 @@ a{
         height: 100vh;
         background-size: cover;
         background-position: 70% top;
-        background-image: url(../assets/images/cover_mobile@1x.jpg);
+        background-image: url(../assets/images/cover@1x.jpg);
         padding: 36px 36px 72px;
 
         @media (device-pixel-ratio: 2) {
-            background-image: url(../assets/images/cover_mobile@2x.jpg);
+            background-image: url(../assets/images/cover@2x.jpg);
         }
 
         @media (min-width: 768px){
             color: red;
+        }
+
+        @media (min-width: 992px){
+            color: green;
         }
 
         display: flex;
@@ -130,6 +138,36 @@ a{
 
 .section{
     margin-bottom: 72px;
+}
+
+@media(min-width: 992px){
+    .horizontal{
+        display: flex;
+        width: 300vw;
+        height: 100vh;
+        overflow-x: hidden;
+        
+
+        .section{
+            width: 100vw;
+        }
+
+        &__img{
+            grid-row: 1 / 2 span;
+        }
+
+        &__txt{
+            grid-row: 1 / 2 span;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            *{
+                margin: 0;
+            }
+        }
+    }
 }
 
 
@@ -154,6 +192,20 @@ a{
     &--dl{
         padding: 72px 18px;
     }
+
+    @media (min-width: 996px){
+
+        &__txt{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            *{
+                margin: 0;
+            }
+        }
+    }
 }
 
 .gallery{
@@ -172,6 +224,10 @@ a{
     background-color: var(--c-primary);
     padding: 36px;
     border-radius: 15px;
+    max-width: 470px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
 
     &__img{
         padding-top: 90px;

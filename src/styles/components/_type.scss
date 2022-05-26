@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 .body{
-    font-size: v.$txt;
+    font-size: var(--txt);
     color: var(--c-text);
     line-height: 1.5;
     font-family: 'Open Sans', sans-serif;
@@ -10,14 +10,14 @@
 }
 
 .title{
-    font-size: v.$title;
+    font-size: var(--title);
     line-height: 1.3;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     text-align: center;
 
     &--small{
-        font-size: v.$subtitle;
+        font-size: var(--subtitle);
     }
 
     &--underline{
