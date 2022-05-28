@@ -42,6 +42,10 @@
 
     &--break{
         display: block;
+
+        @media (min-width: 992px){
+            display: inline;
+        }
     }
 
     &--left{
@@ -69,6 +73,7 @@
     }
 
     &--top{
+        display: inline-block;
         max-width: 370px;
     }
     

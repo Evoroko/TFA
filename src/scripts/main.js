@@ -50,11 +50,12 @@ function light(){
 if(window.matchMedia('(min-width: 768px)').matches){
     gsap.to(".horizontal", {
         x: '-200vw',
+        ease: "none",
         scrollTrigger: {
             trigger: '.horizontal',
             pin: true,
             start: 'center center',
-            end: '+=5000',
+            end: '+=3000',
             scrub: true,
             toggleActions: 'play none reverse none'
         }
