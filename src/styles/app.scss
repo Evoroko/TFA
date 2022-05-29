@@ -93,7 +93,7 @@ a{
 
     &__el{
         margin: 0 auto 18px auto;
-        max-width: 100ch;
+        max-width: 800px;
 
         &--center{
             text-align: center;
@@ -200,6 +200,11 @@ a{
     &:hover{
         color: var(--c-fourth);
     }
+}
+
+.horizontal__img{
+        grid-row: 1 / 2 span;
+        max-width: 240px;
 }
 
 @media(min-width: 992px){

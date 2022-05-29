@@ -47,7 +47,7 @@ function light(){
 
 
 // Greensock
-if(window.matchMedia('(min-width: 768px)').matches){
+if(window.matchMedia('(min-width: 992px)').matches){
     gsap.to(".horizontal", {
         x: '-200vw',
         ease: "none",
