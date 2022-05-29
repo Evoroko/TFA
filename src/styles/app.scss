@@ -83,6 +83,35 @@ a{
         height: 100vh;
         justify-content: center;
     }
+
+    &__title{
+        margin: auto;
+        display: block;
+
+        @media (min-width: 992px){
+            margin-top: 0;
+        }
+    }
+
+    &__el{
+        margin-bottom: 18px;
+    }
+
+    &__txt{
+        display: flex;
+        flex-direction: column;
+        
+        @media (min-width: 992px){
+            margin-top: 0;
+            justify-content: center;
+        }
+    }
+
+    &__content{
+        padding: 36px;
+        max-width: 1500px;
+        margin: auto;
+    }
 }
 
 .content{

@@ -74,5 +74,25 @@
         grid-column-end: -1;
     }
 
+    .d-row-start01{
+        grid-row-start: 1;
+    }
+    .d-row-start02{
+        grid-row-start: 2;
+    }
+    .d-row-start03{
+        grid-row-start: 3;
+    }
+
+
+    .d-row-end02{
+        grid-row-end: 2;
+    }
+    .d-row-end03{
+        grid-row-end: 3;
+    }
+    .d-row-end04{
+        grid-row-end: 4;
+    }
 }
 
