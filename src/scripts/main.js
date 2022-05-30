@@ -3,6 +3,7 @@
 import gsap from "../../node_modules/gsap";
 import ScrollTrigger from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
+gsap.config({nullTargetWarn: false});
 
 // Date copyright
 
@@ -50,11 +51,16 @@ function light(){
 
 // Greensock
 if(window.matchMedia('(min-width: 992px)').matches){
-    gsap.to(".horizontal", {
-        x: '-200vw',
+    horizontalScroll('.horizontal', '-200vw');
+}
+
+
+function horizontalScroll(cible, length) {
+    gsap.to(`${cible}`, {
+        x: `${length}`,
         ease: "none",
         scrollTrigger: {
-            trigger: '.horizontal',
+            trigger: `${cible}`,
             pin: true,
             start: 'center center',
             end: '+=3000',

@@ -164,6 +164,16 @@ a{
         }
 
     }
+
+    &__quote{
+        max-width: none;
+        margin: 0 auto 18px auto;
+        font-size: var(--subtitle);
+        
+        @media (min-width: 992px){
+            text-align: center;
+        }
+    }
 }
 
 .img{
@@ -191,6 +201,17 @@ a{
 
     &--nomargin{
         margin: 0 auto 0 auto;
+    }
+
+    &--typo{
+        height: 80vh;
+        overflow-x: scroll;
+        max-width: none;
+
+        img{
+            height: 95%;
+            width: auto;
+        }
     }
 }
 
@@ -281,8 +302,9 @@ a{
         }
 
         &__cs{
-            width: 200vw;
+            width: 100vw;
             padding: 36px;
+            object-fit: contain;
         }
     }
 }
