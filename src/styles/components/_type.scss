@@ -4,7 +4,7 @@
 .body{
     font-size: var(--txt);
     color: var(--c-text);
-    line-height: 1.5;
+    line-height: 1.6;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
 }
@@ -52,6 +52,12 @@
         text-align: left;
     }
 
+    @media (min-width: 992px){
+        &--dleft{
+            text-align: left;
+        }
+    }
+
     &__slide{
         background-repeat: no-repeat;
         background-position: center top;
@@ -75,6 +81,14 @@
     &--top{
         display: inline-block;
         max-width: 370px;
+
+        @media(min-width: 992px){
+            max-width: none;
+        }
+    }
+
+    &--center{
+        margin: auto;
     }
     
 }

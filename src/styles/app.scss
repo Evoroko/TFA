@@ -121,7 +121,7 @@ a{
     margin-right: auto;
 
     &__el{
-        margin: 0 auto 18px auto;
+        margin-bottom: 18px;
         max-width: 800px;
 
         &--center{
@@ -168,7 +168,8 @@ a{
 
 .img{
     display: block;
-    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
 
     img{
         width: 100%;
@@ -234,6 +235,8 @@ a{
 .horizontal__img{
         grid-row: 1 / 2 span;
         max-width: 240px;
+        margin-left: auto;
+        margin-right: auto;
 }
 
 @media(min-width: 992px){
@@ -264,10 +267,22 @@ a{
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            max-width: 600px;
+            margin-right: auto;
+            margin-left: auto;
 
             *{
                 margin: 0;
             }
+        }
+
+        &--cs{
+            width: 600vw;
+        }
+
+        &__cs{
+            width: 200vw;
+            padding: 36px;
         }
     }
 }
@@ -305,7 +320,6 @@ a{
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
         }
     }
 }
@@ -360,8 +374,10 @@ a{
         }
     }
 
-    &--down{
-        margin-top: 36px;
+    @media (min-width: 992px){
+        &--down{
+            margin-top: 36px;
+        }
     }
 }
 
@@ -380,6 +396,10 @@ a{
 
     a{
         color: var(--c-third);
+        
+        &:hover{
+            color: var(--c-fourth);
+        }
     }
 
     @media (min-width: 992px){
@@ -397,5 +417,7 @@ a{
 
     &__el{
         margin: 0 18px;
+
+        
     }
 }

@@ -46,20 +46,3 @@ function light(){
     document.body.setAttribute("data-theme", "light");
     ball.classList.remove("btn--ballDark");
 }
-
-
-// Greensock
-if(window.matchMedia('(min-width: 992px)').matches){
-    gsap.to(".horizontal", {
-        x: '-200vw',
-        ease: "none",
-        scrollTrigger: {
-            trigger: '.horizontal',
-            pin: true,
-            start: 'center center',
-            end: '+=3000',
-            scrub: true,
-            toggleActions: 'play none reverse none'
-        }
-    });
-}
