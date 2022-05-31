@@ -102,8 +102,33 @@ function showSlides(n) {
 
 
 // Greensock
+
+var review = document.querySelector('.review--down');
+
 if(window.matchMedia('(min-width: 992px)').matches){
     horizontalScroll('.horizontal', '-200vw');
+
+    if(review){
+        gsap.to('.review--down', {
+            y: -100,
+            scrollTrigger: {
+                trigger: '.review',
+                scrub: 0.8
+            }
+        })
+    }
+}else{
+    if(review) {
+        gsap.from('.review',{
+            x: -100,
+            opacity: 0,
+            stagger: 0.3,
+            scrollTrigger: {
+                trigger: '.review__img--tasu',
+                start: 'center 80%'
+            }
+        })
+    }
 }
 
 var sections = document.querySelectorAll('.section');
@@ -119,6 +144,27 @@ for (let section of sections){
     })
 }
 
+var gallery = document.querySelector('.gallery');
+if(gallery){
+    gsap.to('.gallery', {
+        x: -200,
+        duration: 2,
+        scrollTrigger: {
+            trigger: '.gallery',
+            scrub: 0.8
+        }
+    })
+}
+
+var title = document.querySelector('.topSection--title');
+if(title){
+    gsap.from('.content__el--top', {
+        x: -200,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.3
+    })
+}
 
 
 function horizontalScroll(cible, length) {
