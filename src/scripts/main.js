@@ -49,6 +49,55 @@ function light(){
 }
 
 
+//Slider
+//Inspiré par https://www.w3schools.com/howto/howto_js_slideshow.asp et modifié
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+let prevButton = document.querySelector(".slideshow--prev");
+if(prevButton){
+    prevButton.addEventListener('click', () => {
+        plusSlides(-1);
+    });
+}
+
+let nextButton = document.querySelector(".slideshow--next");
+if(nextButton){
+    nextButton.addEventListener('click', () => {
+        plusSlides(1);
+    });
+}
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.querySelectorAll(".slideshow__slides");
+    if (n > slides.length) {
+        slideIndex = 1;
+    } 
+
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].classList.add("hidden");
+    }
+
+    slides[slideIndex-1].classList.remove("hidden"); 
+}
+
+
+
+
 // Greensock
 if(window.matchMedia('(min-width: 992px)').matches){
     horizontalScroll('.horizontal', '-200vw');

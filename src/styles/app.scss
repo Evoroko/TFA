@@ -209,7 +209,7 @@ a{
         max-width: none;
 
         img{
-            height: 95%;
+            height: 100%;
             width: auto;
         }
     }
@@ -270,6 +270,7 @@ a{
         width: 300vw;
         height: 100vh;
         overflow-x: hidden;
+        align-items: center;
         
 
         .section{
@@ -305,6 +306,7 @@ a{
             width: 100vw;
             padding: 36px;
             object-fit: contain;
+            position: relative;
         }
     }
 }
@@ -401,6 +403,36 @@ a{
             margin-top: 36px;
         }
     }
+}
+
+.slideshow{
+    &__container{
+        background-color: var(--c-bg);
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 72px 54px 72px 54px;
+        position: relative;
+    }
+
+    &--prev, &--next{
+        padding: 18px;
+    }
+
+    &--prev{
+        position: absolute;
+        left: 0px;
+    }
+
+    &--next{
+        position: absolute;
+        right: 0px;
+    }
+}
+
+.hidden{
+    display: none;
 }
 
 .footer{

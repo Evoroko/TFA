@@ -90,6 +90,13 @@
     &--center{
         margin: auto;
     }
+
+    @media (min-width: 992px){
+        &--uj{
+            position: absolute;
+            top: -72px;
+        }
+    }
     
 }
 
