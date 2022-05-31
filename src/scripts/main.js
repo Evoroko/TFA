@@ -111,7 +111,7 @@ for (let section of sections){
     gsap.from(section, {
         y: 200,
         opacity: 0,
-        duration: 1,
+        duration: 0.5,
         scrollTrigger: {
             trigger: section,
             start: 'top 80%'
