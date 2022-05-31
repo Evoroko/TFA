@@ -19,10 +19,16 @@
     <button class="btn btn--theme" id="theme"><span class="btn__txt">Theme</span><span id="ball" class="btn--ball"></span></button>
 
     <section class="topSection topSection--cs topSection__content section">
-        <picture class="img img--nomargin content__el d-grid-start02 d-grid-end07">
-            <img src="assets/images/app.png" alt="">
-        </picture>
-        <div class="d-grid-start08 d-grid-end topSection__txt">
+        <div class="topSection__txt content__el content__sec d-grid-start02 d-grid-end06">
+            <a class="content__el content__el--nomargin" href="http://nell-maissin.be/projets/tfa">
+                <img class="logo--cs" src="assets/images/logo.svg" alt="">
+            </a>
+            <picture class="img img--nomargin topSection__img">
+                <img src="assets/images/app.png" alt="">
+            </picture>
+        </div>
+        <div class="d-grid-start07 d-grid-end12 topSection__txt">
+            
             <h1 class="title title--underline topSection__title topSection__el">Case Study</h1>
             <p class="d-grid-start08 d-grid-end topSection__el">CommiMe, la première application de commissions sans frais pensée pour les artistes.</p>
         </div>
@@ -47,9 +53,12 @@
         <div class="d-grid-start01 d-grid-end06">
             <h2 class="title title--dleft content__el">The Beginning ™</h2>
 
-            <picture class="img content__el">
-                <img src="assets/images/tweet.jpg" alt="">
-            </picture>
+            <figure class="content__el">
+                <picture class="img">
+                    <img src="assets/images/tweet.jpg" alt="">
+                </picture>
+                <figcaption class="caption">Tweet de recherche de volontaires pour une interview.</figcaption>   
+            </figure>
         </div>
 
         <div class="content__el d-grid-start07 d-grid-end d-row-start01 d-row-end02">
@@ -79,7 +88,7 @@
                 <ul class="list spoiler__el">
                     <li>plus de visibilité / plus de clients&thinsp;;</li>
                     <li>pouvoir prédéfinir des formulaires à faire remplir aux clients&thinsp;;</li>
-                    <li>pouvoir mettre en avant différents “articles” (différents types de commissions)&thinsp;;</li>
+                    <li>pouvoir mettre en avant différents «&nbsp;articles&nbsp;» (différents types de commissions)&thinsp;;</li>
                     <li>pas de pourcentage de frais sur les ventes&thinsp;;</li>
                     <li>une simplicité d’utilisation ;</li>
                     <li>une sécurité quant à la fiabilité du client&thinsp;;</li>
@@ -156,14 +165,22 @@
             <p>Avec les informations que j’avais obtenues, je pouvais continuer sur ma lancée et rebondir en lançant un Google Forms avec des questions portant sur l’intérêt et le besoin des utilisateurs concernant mon projet.</p>
             <p>Environ 75% des personnes interrogées étaient intéressées, et ce pourcentage montait à 85% dans le cas où aucun frais ne s’appliquait sur les achats et ventes. Il est ressorti que les artistes avaient beaucoup de problèmes à trouver des clients, alors qu’eux, à l’inverse, ont donné des réponses assez mitigées.</p>
         </div>
+        
         <div class="d-grid-start08 d-grid-end d-row-start01 d-row-end03">
-            <picture class="img content__el">
-                <img src="assets/images/stat_artiste.jpg" alt="">
-            </picture>
-            <picture class="img content__el">
-                <img src="assets/images/stat_client.jpg" alt="">
-            </picture>
+            <figure class="content__el">
+                <picture class="img">
+                    <img src="assets/images/stat_artiste.jpg" alt="">
+                </picture>
+                <figcaption class="caption">Sondage sur la difficulté pour les artistes de trouver des clients.</figcaption>   
+            </figure>
+            <figure class="content__el">
+                <picture class="img">
+                    <img src="assets/images/stat_client.jpg" alt="">
+                </picture>
+                <figcaption class="caption">Sondage sur la difficulté pour les clients de trouver des artistes.</figcaption>   
+            </figure>
         </div>
+
         <div class="content__el d-grid-start01 d-grid-end06">
             <h3 class="title title--small title--left">Découvertes</h3>
             <p>De manière assez surprenante, 55% des utilisateurs trouvaient ardue la communication entre artiste et client.</p>
@@ -180,25 +197,35 @@
 
     <section class="purple section">
         <div class="content content__sec content--purple">
-        <h2 class="title d-grid-start04 d-grid-end10 content__el">MVP</h2>
-        <p class="d-grid-start04 d-grid-end10 content__el">Mon MVP (Minimum Viable Product) avait pour objectif de démontrer qu’il existait une demande pour le service que je proposais, c’est-à-dire un moyen pour les artistes et les clients de se trouver et d’échanger de manière plus simple. J’ai eu pour idée de mettre en place un serveur Discord, et ainsi, de mesurer le nombre de personnes intéressées, et le nombre de ventes effectuées. Mon hypothèse était la suivante&nbsp;:</p>
-        <p class="d-grid-start02 d-grid-end12 content__el content__quote">«&nbsp;Les petits artistes digitaux sont en recherche d’une solution simple pour gagner en temps et en visibilité sur leurs commissions, et les amateurs d’art digital seraient intéressés par une solution simple pour acheter des représentations de leurs personnages.&nbsp;»</p>
-        <p class="d-grid-start04 d-grid-end10 content__el">J’ai pu estimer qu’elle serait confirmée si j’avais au minimum 10 artistes, 10 clients et 3 commissions achetées. Mes attentes ont été complètement dépassées — je me suis retrouvée avec 17 artistes et 31 invités&thinsp;!</p>
-        <picture class="img d-grid-start03 d-grid-end11">
-            <img src="assets/images/invites.png" alt="">
-        </picture>
+            <h2 class="title d-grid-start04 d-grid-end10 content__el">MVP</h2>
+            <p class="d-grid-start04 d-grid-end10 content__el">Mon MVP (Minimum Viable Product) avait pour objectif de démontrer qu’il existait une demande pour le service que je proposais, c’est-à-dire un moyen pour les artistes et les clients de se trouver et d’échanger de manière plus simple. J’ai eu pour idée de mettre en place un serveur Discord, et ainsi, de mesurer le nombre de personnes intéressées, et le nombre de ventes effectuées. Mon hypothèse était la suivante&nbsp;:</p>
+            <p class="d-grid-start02 d-grid-end12 content__el content__quote">«&nbsp;Les petits artistes digitaux sont en recherche d’une solution simple pour gagner en temps et en visibilité sur leurs commissions, et les amateurs d’art digital seraient intéressés par une solution simple pour acheter des représentations de leurs personnages.&nbsp;»</p>
+            <p class="d-grid-start04 d-grid-end10 content__el">J’ai pu estimer qu’elle serait confirmée si j’avais au minimum 10 artistes, 10 clients et 3 commissions achetées. Mes attentes ont été complètement dépassées — je me suis retrouvée avec 17 artistes et 31 invités&thinsp;!</p>
+
+            <figure class="content__el d-grid-start03 d-grid-end11">
+                <picture class="img">
+                    <img src="assets/images/invites.png" alt="">
+                </picture>
+                <figcaption class="caption">Total d'artistes et d'invités.</figcaption>   
+            </figure>
         </div>
-        <div class="content content__sec">
-            <h3 class="title title--small title--left content__el d-grid-start03 d-grid-end08">Comment ai-je mis cela en place ?</h3>
+        <div class="content">
+            <h3 class="title title--small title--left content__el d-grid-start03 d-grid-end08">Comment ai-je mis cela en place&nbsp;?</h3>
             <p class="content__el d-grid-start03 d-grid-end08">Ce fut très simple. J’ai contacté des artistes dans mon entourage, et presque l’intégralité d’entre eux a montré un intérêt pour mon projet. Je ne m’étais pas limitée à eux, cependant, et ai également contacté des personnes qui m’avaient laissé leurs informations de contact sur mon Google Forms. Pour chaque artiste, j’ai demandé un nom, un pseudo et un dessin de leur choix afin de réaliser une étiquette personnalisée pour chacun d’entre eux. J’ai ensuite créé des channels individuels où chacun pouvait déposer sa fiche de commission et disposer d’un chat public qui leur appartenait.</p>
-            <picture class="img d-grid-start08 d-grid-end11">
-                <img src="assets/images/cards.png" alt="">
-            </picture>
+            <figure class="content__el d-grid-start08 d-grid-end11">
+                <picture class="img">
+                    <img src="assets/images/cards.png" alt="">
+                </picture>
+                <figcaption class="caption">Cartes pour identifier les artistes.</figcaption>   
+            </figure>
         </div>
-        <div class="content content__sec">
-            <picture class="img d-grid-start03 d-grid-end11">
-                <img src="assets/images/discord.jpg" alt="">
-            </picture>
+        <div class="content">
+            <figure class="content__el content__el--nomax d-grid-start03 d-grid-end11">
+                <picture class="img">
+                    <img src="assets/images/discord.jpg" alt="">
+                </picture>
+                <figcaption class="caption">Aperçu du serveur Discord.</figcaption>   
+            </figure>
         </div>
         
         <div class="content">
@@ -241,21 +268,31 @@
             <p>Sincèrement, j’étais fière de ce que je commençais à mettre en place. Tout s’emboîtait petit à petit, et graduellement, quelque chose de concret montrait le bout de son nez.</p>
             <p>À cet instant, j’étais satisfaite ! Afin de combler les défauts les plus évidents, j’avais entamé des User Journey de mes fonctionnalités. Or, j’avais oublié un détail important, qui allait mettre en péril tout mon travail.</p>
         </div>
-        <picture class="img d-grid-start02 d-grid-end12">
-            <img src="assets/images/figma.png" alt="">
-        </picture>
+        <figure class="content__el content__el--nomax d-grid-start02 d-grid-end12">
+            <picture class="img img--adjust">
+                <img src="assets/images/figma.png" alt="">
+            </picture>
+            <figcaption class="caption">Prototypes UX sur Figma.</figcaption>   
+        </figure>
     </section>
 
     <section class="content section">
         <h2 class="content__el title title--dleft d-grid-start01 d-grid-end06">Vendredi 13</h2>
         <p class="content__el d-grid-start07 d-grid-end">Nous étions un vendredi 13, ou plus précisément, le vendredi 13 mai. Alors que je commençais à voir la lumière au bout du tunnel, une secousse est passée et a ébranlé toutes mes convictions. La veille, une toute nouvelle plateforme nommée Haru avait annoncé son arrivée. Quelle fut mon horreur en voyant que celle-ci défendait les mêmes valeurs que la mienne et avait un concept extrêmement similaire&thinsp;!</p>
         <div class="d-grid-start01 d-grid-end06">
-            <picture class="img content__el">
-                <img src="assets/images/haru.jpg" alt="">
-            </picture>
-            <picture class="img content__el">
-                <img src="assets/images/haru2.jpg" alt="">
-            </picture>
+            <figure class="content__el">
+                <picture class="img">
+                    <img src="assets/images/haru.jpg" alt="">
+                </picture>
+                <figcaption class="caption">Landing page de Haru.</figcaption>   
+            </figure>
+
+            <figure class="content__el">
+                <picture class="img">
+                    <img src="assets/images/haru2.jpg" alt="">
+                </picture>
+                <figcaption class="caption">Argument de Haru.</figcaption>   
+            </figure>
         </div>
         
         <div class="content__el d-grid-start07 d-grid-end">
@@ -307,32 +344,44 @@
                     <li>rendre les étapes de validation plus claires et ajouter un texte d’explication&thinsp;;</li>
                     <li>ajouter un texte d’explication sur les champs à demander au client de remplir&thinsp;;</li>
                     <li>ajouter un texte d’explication sur les exemples&thinsp;;</li>
-                    <li>mettre le pseudo de l’artiste en avant sur les articles de commission&thinsp;;</li>
+                    <li>mettre le pseudo de l’artiste en avant sur les «&nbsp;articles&nbsp;» de commission&thinsp;;</li>
                     <li>ajouter du contenu dans l’onglet notifications.</li>
                 </ul>
             </details>
         </div>
         <div class="d-grid-start08 d-grid-end">
-            <picture class="img content__el">
-                <img src="assets/images/test_utilisateur.jpg" alt="">
-            </picture>
-            <picture class="img content__el">
-                <img src="assets/images/test_utilisateur2.jpg" alt="">
-            </picture>
+            <figure class="content__el">
+                <picture class="img">
+                    <img src="assets/images/test_utilisateur.jpg" alt="">
+                </picture>
+                <figcaption class="caption">Test utilisateur avec une amie.</figcaption>   
+            </figure>
+            <figure class="content__el">
+                <picture class="img">
+                    <img src="assets/images/test_utilisateur2.jpg" alt="">
+                </picture>
+                <figcaption class="caption">Test utilisateur avec une autre amie.</figcaption>   
+            </figure>
         </div>
     </section>
 
     <section class="purple section">
         <div class="content--purple content">
+
             <div class="d-grid-start02 d-grid-end08 purple__txt">
                 <h2 class="title title--left content__el">Finalisation de l'UI</h2>
                 <h3 class="content__el title title--small title--dleft">Choix d'une palette</h3>
                 <p class="content__el">Grâce à mes tests utilisateurs, tout ce qu’il me restait à faire était de mettre en place une charte graphique et de l’appliquer à l’ensemble de mon application, en faisant attention à respecter l’accessibilité que j’avais mise en place et en ajoutant des éléments qui rendent son utilisation esthétiquement plaisante.</p>
                 <p class="content__el">Je suis partie sur une palette de variations de mauve vibrant, car cette couleur était celle qui collait le mieux à mon sujet. En effet, elle représente le luxe et la créativité — les commissions étant la mise en vente d’art, j’ai pensé qu’il s’agissait là du choix le plus adapté.</p>
             </div>
-            <picture class="img img--bg img--full d-grid-start09 d-grid-end">
-                <img src="assets/images/color_palette@2x.jpg" alt="">
-            </picture>
+
+            <figure class="content__el d-grid-start09 d-grid-end">
+                <picture class="img img--bg">
+                    <img src="assets/images/color_palette@2x.jpg" alt="">
+                </picture>
+                <figcaption class="caption">Essais de palettes.</figcaption>   
+            </figure>
+            
        </div>
             
        <div class="content">
@@ -344,7 +393,6 @@
                 <img src="assets/images/Font_choice.jpg" alt="">
             </picture>
             <p class="content__el d-grid-start01 d-grid-end">*défiler horizontalement</p>
-            
         </div>
 
         <div class="content--purple content">
@@ -355,12 +403,18 @@
                 <p class="content__el">Il était temps pour moi de reprendre mon périple.</p>
             </div>
             <div class="img img--bg img--full d-grid-start09 d-grid-end">
-                <picture class="img content__el">
-                    <img src="assets/images/illu_sketch.png" alt="">
-                </picture>
-                <picture class="img content__el">
-                    <img src="assets/images/illu_cs.png" alt="">
-                </picture>
+                <figure class="content__el">
+                    <picture class="img">
+                        <img src="assets/images/illu_sketch.png" alt="">
+                    </picture>
+                    <figcaption class="caption">Croquis de l'illustration.</figcaption>   
+                </figure>
+                <figure class="content__el">
+                    <picture class="img">
+                        <img src="assets/images/illu_cs.png" alt="">
+                    </picture>
+                    <figcaption class="caption">Premier jet de l'illustration finale.</figcaption>   
+                </figure>
             </div>
        </div>
     </section>
@@ -370,9 +424,12 @@
         <div class="content__el d-grid-start07 d-grid-end">
             <p>En réalité, j’ai travaillé simultanément sur ma landing page et sur mon prototype, cependant, j’ai rapidement heurté un mur en réalisant que je manquais de contenu. J’ai donc dû terminer mon prototype avant de pouvoir vraiment m’attaquer à mon site de présentation.</p>
             <p>J’étais initialement partie sur des présentations classiques d’application, en essayant d’appliquer un fil conducteur visuel qui guide le regard d’une section à l’autre, mais j’ai rapidement réalisé que cela rendait mon projet relativement impersonnel et générique.</p>
-            <picture class="img content__el">
-                <img src="assets/images/landings.png" alt="">
-            </picture>
+            <figure class="content__el">
+                <picture class="img">
+                    <img src="assets/images/landings.png" alt="">
+                </picture>
+                <figcaption class="caption">Premiers jets de landing page.</figcaption>   
+            </figure>
             <p>Suite à cela, j’ai cherché à m’orienter vers une direction artistique plus proche du sujet de mon application, à savoir, le dessin digital. Je me suis donc servie de l’illustration que j’avais réalisée, et ai ajouté des sections dont les bords étaient définis par des motifs similaires à des coups de pinceaux.</p>
             <p>En mettant mon contenu en place, j’ai réalisé qu’il serait plus intéressant que le personnage que j’avais dessiné guide le regard de l’utilisateur vers le texte qui se trouvait à gauche, j’ai donc inversé son sens afin de pouvoir respecter cette idée.</p>
         </div>

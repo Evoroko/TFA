@@ -41,6 +41,11 @@ a{
 	    text-indent: 100%;
         overflow: hidden;
     }
+
+    &--cs{
+        width: 200px;
+        margin: 0 auto 18px auto;
+    }
 }
 
 .dlbtn{
@@ -100,10 +105,12 @@ a{
     &__txt{
         display: flex;
         flex-direction: column;
+        align-items: center;
         
         @media (min-width: 992px){
             margin-top: 0;
             justify-content: center;
+            align-items: flex-start;
         }
     }
 
@@ -111,6 +118,21 @@ a{
         padding: 36px;
         max-width: 1500px;
         margin: auto;
+    }
+
+    &__img{
+        max-height: 500px;
+        img{
+            height: 100%;
+        }
+
+        @media (min-width: 992px){
+            max-height: none;
+            
+            img{
+                height: auto;
+            }
+        }
     }
 }
 
@@ -135,7 +157,19 @@ a{
         &>*{
             margin: 0 auto 18px auto;
         }
-    }
+
+        &--nomax{
+            max-width: none;
+        }
+
+        &--nomargin{
+
+            @media (min-width: 992px){
+                margin: 0;
+            }
+        }
+
+        }
 
     &__sec{
         margin-bottom: 36px;
@@ -213,6 +247,7 @@ a{
             width: auto;
         }
     }
+    
 }
 
 .section{
@@ -223,6 +258,7 @@ a{
     background-color: var(--c-primary);
     border-radius: 15px;
     padding: 18px;
+    cursor: pointer;
 
     &__el{
         border: 1px solid var(--c-primary);
