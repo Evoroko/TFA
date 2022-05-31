@@ -53,6 +53,7 @@ function light(){
 //Inspiré par https://www.w3schools.com/howto/howto_js_slideshow.asp et modifié
 
 var slideIndex = 1;
+let slideExist = document.querySelector('.slideshow__container');
 showSlides(slideIndex);
 
 let prevButton = document.querySelector(".slideshow--prev");
@@ -79,20 +80,22 @@ function currentSlide(n) {
 
 function showSlides(n) {
     var i;
-    var slides = document.querySelectorAll(".slideshow__slides");
-    if (n > slides.length) {
-        slideIndex = 1;
-    } 
-
-    if (n < 1) {
-        slideIndex = slides.length;
+    if(slideExist){
+        var slides = document.querySelectorAll(".slideshow__slides");
+        if (n > slides.length) {
+            slideIndex = 1;
+        } 
+    
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
+    
+        for (i = 0; i < slides.length; i++) {
+            slides[i].classList.add("hidden");
+        }
+    
+        slides[slideIndex-1].classList.remove("hidden");
     }
-
-    for (i = 0; i < slides.length; i++) {
-        slides[i].classList.add("hidden");
-    }
-
-    slides[slideIndex-1].classList.remove("hidden"); 
 }
 
 
@@ -102,6 +105,16 @@ function showSlides(n) {
 if(window.matchMedia('(min-width: 992px)').matches){
     horizontalScroll('.horizontal', '-200vw');
 }
+
+gsap.from('.section', {
+    y: -200,
+    opacity: 0,
+    duration: 1,
+    scrollTrigger: {
+        trigger: '.section',
+        start: 'top center'
+    }
+})
 
 
 function horizontalScroll(cible, length) {
