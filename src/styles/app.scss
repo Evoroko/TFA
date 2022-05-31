@@ -197,7 +197,7 @@ a{
         background-image: url(../assets/images/cover@1x.jpg);
         padding: 36px 36px 72px;
 
-        @media (device-pixel-ratio: 2) {
+        @media (-webkit-min-device-pixel-ratio: 2) {
             background-image: url(../assets/images/cover@2x.jpg);
         }
 
@@ -360,7 +360,7 @@ a{
         content: "";
         display: block;
         background-color: var(--c-bg);
-        background-image: url(../assets/images/pattern.png);
+        background-image: url(../assets/images/pattern@1x.png);
         background-size: contain;
         background-repeat: repeat-x;
         padding: 18px;
@@ -369,10 +369,18 @@ a{
         @media (min-width: 992px){
             padding: 72px;
         }
+
+        @media (-webkit-min-device-pixel-ratio: 2) {
+            background-image: url(../assets/images/pattern@2x.png);
+        }
     }
 
     &::after{
-        background-image: url(../assets/images/pattern2.png);
+        background-image: url(../assets/images/pattern2@1x.png);
+
+        @media (-webkit-min-device-pixel-ratio: 2) {
+            background-image: url(../assets/images/pattern2@2x.png);
+        }
     }
 
     &--dl{
@@ -392,13 +400,13 @@ a{
 .gallery{
     height: 80vh;
     width: 160%;
-    background-image: url(../assets/images/gallery@1x.webp);
+    background-image: url(../assets/images/gallery@1x.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
-    @media (device-pixel-ratio: 2) {
-        background-image: url(../assets/images/gallery@2x.webp);
+    @media (-webkit-min-device-pixel-ratio: 2) {
+        background-image: url(../assets/images/gallery@2x.png);
     }
 
     @media(min-width: 992px){
@@ -429,15 +437,27 @@ a{
         background-position: top center;
 
         &--tasu{
-            background-image: url(../assets/images/opinion__tasu.png);
+            background-image: url(../assets/images/opinion__tasu@1x.png);
+
+            @media (-webkit-min-device-pixel-ratio: 2){
+                background-image: url(../assets/images/opinion__tasu@2x.png);
+            }
         }
 
         &--amavocado{
-            background-image: url(../assets/images/opinion__amavocado.png);
+            background-image: url(../assets/images/opinion__amavocado@1x.png);
+
+            @media (-webkit-min-device-pixel-ratio: 2){
+                background-image: url(../assets/images/opinion__amavocado@2x.png);
+            }
         }
 
         &--rener{
-            background-image: url(../assets/images/opinion__rener.png);
+            background-image: url(../assets/images/opinion__rener@1x.png);
+
+            @media (-webkit-min-device-pixel-ratio: 2){
+                background-image: url(../assets/images/opinion__rener@2x.png);
+            }
         }
     }
 
