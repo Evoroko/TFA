@@ -106,15 +106,19 @@ if(window.matchMedia('(min-width: 992px)').matches){
     horizontalScroll('.horizontal', '-200vw');
 }
 
-gsap.from('.section', {
-    y: -200,
-    opacity: 0,
-    duration: 1,
-    scrollTrigger: {
-        trigger: '.section',
-        start: 'top center'
-    }
-})
+var sections = document.querySelectorAll('.section');
+for (let section of sections){
+    gsap.from(section, {
+        y: 200,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+            trigger: section,
+            start: 'top 80%'
+        }
+    })
+}
+
 
 
 function horizontalScroll(cible, length) {
