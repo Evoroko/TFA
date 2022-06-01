@@ -15,7 +15,7 @@
   <script src="scripts/main.js" defer></script>
 </head>
 
-<body class="body">
+<body class="body anim--case-study">
     <button class="btn btn--theme" id="theme"><span class="btn__txt">Theme</span><span id="ball" class="btn--ball"></span></button>
 
     <section class="topSection topSection--cs topSection__content section">
@@ -28,7 +28,7 @@
                 <source srcset="assets/images/app@1x.png 1x, assets/images/app@2x.png 2x" type="image/png">
                 <img src="assets/images/app@1x.png"
                     alt="Démonstration du visuel de CommiMe."
-                    loading="lazy"
+                    loading="eager"
                     decoding="async">
             </picture>
         </div>
@@ -60,10 +60,12 @@
 
             <figure class="content__el">
                 <picture class="img">
+                    <source srcset="assets/images/tweet@1x.webp 1x, assets/images/tweet@2x.webp 2x" type="image/webp">
                     <source srcset="assets/images/tweet@1x.jpg 1x, assets/images/tweet@2x.jpg 2x" type="image/jpeg">
                     <img src="assets/images/tweet@1x.jpg"
                         alt="Tweet demandant à des artistes et des clients de commissions de répondre à une enquête."
-                        loading="lazy"
+                        class="img--bg"
+                        loading="eager"
                         decoding="async">
                 </picture>
                 <figcaption class="caption">Tweet de recherche de volontaires pour une interview.</figcaption>   
@@ -152,17 +154,18 @@
                         <li>Très peu de clients y vont par eux-mêmes, ils y sont dirigés par l’artiste qui les intéresse.</li>
                     </ul>
                 </div>
-                <details>
-                    <summary class="spoiler">Ce qui les convainc d’acheter une commission</summary>
-                    <ul class="list spoiler__el">
-                        <li>une envie de coucher une idée sur papier&thinsp;;</li>
-                        <li>le style de dessin&thinsp;;</li>
-                        <li>le prix&thinsp;;</li>
-                        <li>la rapidité d’exécution&thinsp;;</li>
-                        <li>le fait d’aider une personne avec peu de moyens&thinsp;;</li>
-                        <li>l’envie de soutenir un ami.</li>
-                    </ul>
-                </details>
+            </details>
+            
+            <details>
+                <summary class="spoiler">Ce qui les convainc d’acheter une commission</summary>
+                <ul class="list spoiler__el">
+                    <li>une envie de coucher une idée sur papier&thinsp;;</li>
+                    <li>le style de dessin&thinsp;;</li>
+                    <li>le prix&thinsp;;</li>
+                    <li>la rapidité d’exécution&thinsp;;</li>
+                    <li>le fait d’aider une personne avec peu de moyens&thinsp;;</li>
+                    <li>l’envie de soutenir un ami.</li>
+                </ul>
             </details>
             <p>Grâce à ces réponses, je confirmais mon hypothèse initiale&nbsp;: le processus des commissions pouvait être amélioré si l’on se penchait sur tous les problèmes récurrents que j’ai pu sortir de mes interviews. Le site web que je souhaitais développer avait donc une raison d’être.</p>
         </div>
@@ -178,19 +181,23 @@
         <div class="d-grid-start08 d-grid-end d-row-start01 d-row-end03">
             <figure class="content__el">
                 <picture class="img">
+                    <source srcset="assets/images/stat_artiste@1x.webp 1x, assets/images/stat_artiste@2x.webp 2x" type="image/webp">
                     <source srcset="assets/images/stat_artiste@1x.jpg 1x, assets/images/stat_artiste@2x.jpg 2x" type="image/jpeg">
                     <img src="assets/images/stat_artiste@1x.jpg"
                         alt="Statistique des artistes ayant des difficultés à trouver des clients."
-                        loading="lazy"
+                        class="img--bg"
+                        loading="eager"
                         decoding="async">
                 </picture>
                 <figcaption class="caption">Sondage sur la difficulté pour les artistes de trouver des clients.</figcaption>   
             </figure>
             <figure class="content__el">
                 <picture class="img">
+                    <source srcset="assets/images/stat_client@1x.webp 1x, assets/images/stat_client@2x.webp 2x" type="image/webp">
                     <source srcset="assets/images/stat_client@1x.jpg 1x, assets/images/stat_client@2x.jpg 2x" type="image/jpeg">
                     <img src="assets/images/stat_client@1x.jpg" alt="Statistique des clients ayant des difficultés à trouver des artistes."
-                    loading="lazy"
+                    class="img--bg"
+                    loading="eager"
                     decoding="async">
                 </picture>
                 <figcaption class="caption">Sondage sur la difficulté pour les clients de trouver des artistes.</figcaption>   
@@ -207,23 +214,25 @@
                 <li>une fonctionnalité permettant de faciliter la communication entre artiste et client&thinsp;;</li>
                 <li>une fonctionnalité permettant d'entretenir et de customiser ses fiches de commissions en réduisant les efforts nécessaires pour.</li>
             </ul>
-            <p>J’ai donc su comment me diriger et comment m’y prendre pour la suite.</p>
+            <p>J’ai donc su comment me diriger et comment m’y prendre par la suite.</p>
         </div>
     </section>
 
     <section class="purple section">
         <div class="content content__sec content--purple">
             <h2 class="title d-grid-start04 d-grid-end10 content__el">MVP</h2>
-            <p class="d-grid-start04 d-grid-end10 content__el">Mon MVP (Minimum Viable Product) avait pour objectif de démontrer qu’il existait une demande pour le service que je proposais, c’est-à-dire un moyen pour les artistes et les clients de se trouver et d’échanger de manière plus simple. J’ai eu pour idée de mettre en place un serveur Discord, et ainsi, de mesurer le nombre de personnes intéressées, et le nombre de ventes effectuées. Mon hypothèse était la suivante&nbsp;:</p>
+            <p class="d-grid-start04 d-grid-end10 content__el">Mon MVP (Minimum Viable Product) avait pour objectif de démontrer qu’il existait une demande pour le service que je proposais, c’est-à-dire un moyen pour les artistes et les clients de se trouver et d’échanger de manière plus simple. J’ai eu pour idée de mettre en place un serveur Discord, et ainsi, de mesurer le nombre de personnes intéressées et le nombre de ventes effectuées. Mon hypothèse était la suivante&nbsp;:</p>
             <p class="d-grid-start02 d-grid-end12 content__el content__quote">«&nbsp;Les petits artistes digitaux sont en recherche d’une solution simple pour gagner en temps et en visibilité sur leurs commissions, et les amateurs d’art digital seraient intéressés par une solution simple pour acheter des représentations de leurs personnages.&nbsp;»</p>
             <p class="d-grid-start04 d-grid-end10 content__el">J’ai pu estimer qu’elle serait confirmée si j’avais au minimum 10 artistes, 10 clients et 3 commissions achetées. Mes attentes ont été complètement dépassées — je me suis retrouvée avec 17 artistes et 31 invités&thinsp;!</p>
 
             <figure class="content__el d-grid-start03 d-grid-end11">
                 <picture class="img">
+                    <source srcset="assets/images/invites@1x.webp 1x, assets/images/invites@2x.webp 2x" type="image/webp">
                     <source srcset="assets/images/invites@1x.jpg 1x, assets/images/invites@2x.jpg 2x" type="image/jpeg">
                     <img src="assets/images/invites@1x.jpg"
                         alt="Nombre d'invités et d'artistes pour mon MVP."
-                        loading="lazy"
+                        class="img--bg"
+                        loading="eager"
                         decoding="async">
                 </picture>
                 <figcaption class="caption">Total d'artistes et d'invités.</figcaption>   
@@ -232,12 +241,12 @@
         <div class="content">
             <h3 class="title title--small title--left content__el d-grid-start03 d-grid-end08">Comment ai-je mis cela en place&nbsp;?</h3>
             <p class="content__el d-grid-start03 d-grid-end08">Ce fut très simple. J’ai contacté des artistes dans mon entourage, et presque l’intégralité d’entre eux a montré un intérêt pour mon projet. Je ne m’étais pas limitée à eux, cependant, et ai également contacté des personnes qui m’avaient laissé leurs informations de contact sur mon Google Forms. Pour chaque artiste, j’ai demandé un nom, un pseudo et un dessin de leur choix afin de réaliser une étiquette personnalisée pour chacun d’entre eux. J’ai ensuite créé des channels individuels où chacun pouvait déposer sa fiche de commission et disposer d’un chat public qui leur appartenait.</p>
-            <figure class="content__el d-grid-start08 d-grid-end11">
+            <figure class="content__el d-grid-start09 d-grid-end11">
                 <picture class="img">
                     <source srcset="assets/images/cards@1x.webp 1x, assets/images/cards@2x.webp 2x" type="image/webp">
                     <source srcset="assets/images/cards@1x.jpg 1x, assets/images/cards@2x.jpg 2x" type="image/png">
                     <img src="assets/images/cards@1x.png" alt="Fiches personnalisées pour les artistes participant."
-                    loading="lazy"
+                    loading="eager"
                     decoding="async">
                 </picture>
                 <figcaption class="caption">Cartes pour identifier les artistes.</figcaption>   
@@ -246,10 +255,12 @@
         <div class="content">
             <figure class="content__el content__el--nomax d-grid-start03 d-grid-end11">
                 <picture class="img">
+                    <source srcset="assets/images/discord@1x.webp 1x, assets/images/discord@2x.webp 2x" type="image/webp">
                     <source srcset="assets/images/discord@1x.jpg 1x, assets/images/discord@2x.jpg 2x" type="image/jpeg">
                     <img src="assets/images/discord@1x.jpg" 
                         alt="Aperçu du serveur Discord ayant servi de MVP."
-                        loading="lazy"
+                        class="img--bg"
+                        loading="eager"
                         decoding="async">
                 </picture>
                 <figcaption class="caption">Aperçu du serveur Discord.</figcaption>   
@@ -289,7 +300,7 @@
         </div>
     </section>
 
-    <section class="content section">
+    <section class="content section--noanim">
         <h2 class="content__el title title--dleft d-grid-start01 d-grid-end06">Mise en place de l'UX</h2>
         <div class="content__el d-grid-start07 d-grid-end">
             <p>Mon MVP, malgré quelques faiblesses, avait été un succès. C’est donc sans plus tarder que je me suis penchée sur le réel produit que je souhaitais réaliser — un prototype fonctionnel sur Figma. Je suis retournée vers les notes que j’avais prises au cours de mes interviews, j’y ai ajouté les suggestions des artistes et des clients qui ont participé à mon MVP, et j’ai finalement pu commencer à mettre en place mes prototypes.</p>
@@ -298,10 +309,12 @@
         </div>
         <figure class="content__el content__el--nomax d-grid-start02 d-grid-end12">
             <picture class="img img--adjust">
+                <source srcset="assets/images/figma@1x.webp 1x, assets/images/figma@2x.webp 2x" type="image/webp">
                 <source srcset="assets/images/figma@1x.jpg 1x, assets/images/figma@2x.jpg 2x" type="image/jpeg">
                 <img src="assets/images/figma@1x.jpg"
                     alt="Aperçu de mes premiers prototypes Figma."
-                    loading="lazy"
+                    class="img--bg"
+                    loading="eager"
                     decoding="async">
             </picture>
             <figcaption class="caption">Prototypes UX sur Figma.</figcaption>   
@@ -314,10 +327,12 @@
         <div class="d-grid-start01 d-grid-end06">
             <figure class="content__el">
                 <picture class="img">
+                    <source srcset="assets/images/haru@1x.webp 1x, assets/images/haru@2x.webp 2x" type="image/webp">
                     <source srcset="assets/images/haru@1x.jpg 1x, assets/images/haru@2x.jpg 2x" type="image/jpeg">
                     <img src="assets/images/haru@1x.jpg"
                         alt="Aperçu de la landing page de Haru."
-                        loading="lazy"
+                        class="img--bg"
+                        loading="eager"
                         decoding="async">
                 </picture>
                 <figcaption class="caption">Landing page de Haru.</figcaption>   
@@ -325,10 +340,12 @@
 
             <figure class="content__el">
                 <picture class="img">
+                    <source srcset="assets/images/haru2@1x.webp 1x, assets/images/haru2@2x.webp 2x" type="image/webp">
                     <source srcset="assets/images/haru2@1x.jpg 1x, assets/images/haru2@2x.jpg 2x" type="image/jpeg">
                     <img src="assets/images/haru2@1x.jpg"
                         alt="Aperçu des arguments de Haru."
-                        loading="lazy"
+                        class="img--bg"
+                        loading="eager"
                         decoding="async">
                 </picture>
                 <figcaption class="caption">Argument de Haru.</figcaption>   
@@ -337,14 +354,19 @@
         
         <div class="content__el d-grid-start07 d-grid-end">
             <p>Il m’a fallu passer par toutes les étapes du deuil — j’étais dans un premier temps dans le déni, puis en colère que ce soit arrivé à ce moment précis, et ensuite dépitée à l’idée de continuer. J’ai bien cru abandonner. Cependant, j’ai tenu bon, et je me suis remise au travail après une crise de nerfs bien méritée. Je ne pouvais pas analyser le site en lui-même, car il était seulement annoncé pour le moment. Cependant, quelques aperçus d’écrans étaient disponibles avec des commentaires des développeurs, j’ai donc pu établir sur quels points je faisais une différence.</p>
-            <ul class="list">
+            <ul class="list content__sec">
                 <li>Ils n’ont pas de version mobile&thinsp;;</li>
                 <li>Il y a des frais pour les clients ;</li>
                 <li>Les commissions ne sont pas la première chose visible, ce sont les œuvres&thinsp;;</li>
                 <li>Il n’y a pas de tarif visible directement&thinsp;;</li>
                 <li>Le site utilise le dollar, il causerait donc des frais de conversion vers l’euro sur Paypal pour les utilisateurs de l’Union Européenne.</li>
             </ul>
-            <p>Finalement, j’ai su tirer une force de ce problème. En effet, à son lancement, Haru a mis en place un serveur Discord ouvert aux suggestions des utilisateurs, et ce projet ayant généré beaucoup d’engouement, j’ai pu récolter énormément d’avis utilisateurs sans avoir à interroger qui que ce soit, j’ai donc pu reprendre mon périple sereinement.</p>
+            <p>Finalement, j’ai su tirer une force de ce problème. En effet, à son lancement, Haru a mis en place un serveur Discord ouvert aux suggestions des utilisateurs, et ce projet ayant généré beaucoup d’engouement, j’ai pu récolter des requêtes de fonctionnalités par les utilisateurs sans avoir à interroger qui que ce soit.</p>
+            <ul class="list">
+                <li>la possibilité de définir un nombre de slots&thinsp;;</li>
+                <li>un système d'abonnement&thinsp;;</li>
+                <li>une indication de la progression au client&thinsp;;</li>
+            </ul>
         </div>
     </section>
 
@@ -353,27 +375,33 @@
             <div class="horizontal section horizontal--cs">
                 <div class="horizontal__cs">
                     <h2 class="content__sec title title--dleft title--uj">User Journey</h2>
-                    <picture class="img">
+                    <picture class="img uj__el">
+                        <source srcset="assets/images/userjourney01@1x.webp 1x, assets/images/userjourney01@2x.webp 2x" type="image/webp">
                         <source srcset="assets/images/userjourney01@1x.jpg 1x, assets/images/userjourney01@2x.jpg 2x" type="image/jpeg">
                         <img src="assets/images/userjourney01@1x.jpg"
                             alt="Premier User Journey."
-                            loading="lazy"
+                            class="img--bg"
+                            loading="eager"
                             decoding="async">
                     </picture>
                 </div>
                 
-                <picture class="img horizontal__cs">
+                <picture class="img horizontal__cs uj__el">
+                    <source srcset="assets/images/userjourney02@1x.webp 1x, assets/images/userjourney02@2x.webp 2x" type="image/webp">
                     <source srcset="assets/images/userjourney02@1x.jpg 1x, assets/images/userjourney02@2x.jpg 2x" type="image/jpeg">
                     <img src="assets/images/userjourney02@1x.jpg" 
                         alt="Troisième User Journey."
-                        loading="lazy"
+                        class="img--bg"
+                        loading="eager"
                         decoding="async">
                 </picture>
-                <picture class="img horizontal__cs">
+                <picture class="img horizontal__cs uj__el">
+                    <source srcset="assets/images/userjourney03@1x.webp 1x, assets/images/userjourney03@2x.webp 2x" type="image/webp">
                     <source srcset="assets/images/userjourney03@1x.jpg 1x, assets/images/userjourney03@2x.jpg 2x" type="image/jpeg">
                     <img src="assets/images/userjourney03@1x.jpg"
                         alt="Troisième User Journey."
-                        loading="lazy"
+                        class="img--bg"
+                        loading="eager"
                         decoding="async">
                 </picture>
             </div>
@@ -404,6 +432,7 @@
         <div class="d-grid-start08 d-grid-end">
             <figure class="content__el">
                 <picture class="img">
+                    <source srcset="assets/images/test_utilisateur@1x.webp 1x, assets/images/test_utilisateur@2x.webp 2x" type="image/webp">
                     <source srcset="assets/images/test_utilisateur@1x.jpg 1x, assets/images/test_utilisateur@2x.jpg 2x" type="image/jpeg">
                     <img src="assets/images/test_utilisateur@1x.jpg"
                         alt="Premier test utilisateur."
@@ -414,6 +443,7 @@
             </figure>
             <figure class="content__el">
                 <picture class="img">
+                    <source srcset="assets/images/test_utilisateur2@1x.webp 1x, assets/images/test_utilisateur2@2x.webp 2x" type="image/webp">
                     <source srcset="assets/images/test_utilisateur2@1x.jpg 1x, assets/images/test_utilisateur2@2x.jpg 2x" type="image/jpeg">
                     <img src="assets/images/test_utilisateur2@1x.jpg"
                         alt="Premier test utilisateur."
@@ -437,6 +467,7 @@
 
             <figure class="content__el d-grid-start09 d-grid-end">
                 <picture class="img img--bg">
+                    <source srcset="assets/images/color_palette@1x.webp 1x, assets/images/color_palette@2x.webp 2x" type="image/webp">
                     <source srcset="assets/images/color_palette@1x.jpg 1x, assets/images/color_palette@2x.jpg 2x" type="image/jpeg">
                     <img src="assets/images/color_palette@1x.jpg"
                         alt="Essais de palettes."
@@ -454,6 +485,7 @@
                 <p>Concernant la typographie, j’ai réalisé de nombreux essais avec différentes polices, graisses et interlignes afin de cibler au mieux mes couleurs de paragraphes. Finalement, après beaucoup de réflexion, je suis restée sur la Poppins Bold avec 1.3 d’interligne, accompagnée par la Open Sans Regular en 1.6 d’interligne, le tout sur une échelle de 1.250 en Major Third.</p>
             </div>
             <picture class="img img--typo d-grid-start01 d-grid-end">
+                <source srcset="assets/images/Font_choice@1x.webp 1x, assets/images/Font_choice@2x.webp 2x" type="image/webp">
                 <source srcset="assets/images/Font_choice@1x.jpg 1x, assets/images/Font_choice@2x.jpg 2x" type="image/jpeg">
                 <img src="assets/images/Font_choice@1x.jpg"
                     alt="Choix de police."
@@ -473,6 +505,7 @@
             <div class="img img--bg img--full d-grid-start09 d-grid-end">
                 <figure class="content__el">
                     <picture class="img">
+                        <source srcset="assets/images/illu_sketch@1x.webp 1x, assets/images/illu_sketch@2x.webp 2x" type="image/webp">
                         <source srcset="assets/images/illu_sketch@1x.jpg 1x, assets/images/illu_sketch@2x.jpg 2x" type="image/jpeg">
                         <img src="assets/images/illu_sketch@1x.jpg"
                             alt="Croquis de l'illustration de la landing page."
@@ -483,6 +516,7 @@
                 </figure>
                 <figure class="content__el">
                     <picture class="img">
+                        <source srcset="assets/images/illu_cs@1x.webp 1x, assets/images/illu_cs@2x.webp 2x" type="image/webp">
                         <source srcset="assets/images/illu_cs@1x.jpg 1x, assets/images/illu_cs@2x.jpg 2x" type="image/jpeg">
                         <img src="assets/images/illu_cs@1x.jpg" 
                             alt="Illustration de la landing page."
@@ -502,6 +536,7 @@
             <p>J’étais initialement partie sur des présentations classiques d’application, en essayant d’appliquer un fil conducteur visuel qui guide le regard d’une section à l’autre, mais j’ai rapidement réalisé que cela rendait mon projet relativement impersonnel et générique.</p>
             <figure class="content__el">
                 <picture class="img">
+                    <source srcset="assets/images/landings@1x.webp 1x, assets/images/landings@2x.webp 2x" type="image/webp">
                     <source srcset="assets/images/landings@1x.jpg 1x, assets/images/landings@2x.jpg 2x" type="image/jpeg">
                     <img src="assets/images/landings@1x.jpg"
                         alt="Essais de landing page."

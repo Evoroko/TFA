@@ -233,7 +233,6 @@ a{
     &--bg{
         img{
             background-color: var(--c-primary);
-            border: solid 2px var(--c-primary);
         }
     }
 
@@ -254,7 +253,7 @@ a{
     
 }
 
-.section{
+.section, .section--noanim, .section--slidein{
     margin-bottom: 72px;
 }
 
@@ -275,7 +274,7 @@ a{
 .list{
 
     li{
-        margin-bottom: 18px;
+        margin-bottom: 9px;
         &::before{
             content: "–";
             position: absolute;
@@ -298,10 +297,40 @@ a{
         max-width: 240px;
         margin-left: auto;
         margin-right: auto;
+        border: 1px solid var(--c-primary);
+        border-radius: 15px;
 }
 
 .wrap{
     overflow-x: hidden;
+}
+
+.uj__el{
+    height: 60vh;
+    overflow-x: scroll;
+    margin-left: 36px;
+    margin-bottom: 18px;
+
+    
+    img{
+        width: auto;
+        height: 100%;
+    }
+
+    @media (min-width: 992px){
+        width: 100%;
+        height: auto;
+        overflow-x: hidden;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-top: 0;
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+
+    }
 }
 
 @media(min-width: 992px){
@@ -397,6 +426,8 @@ a{
     }
 }
 
+
+
 .gallery{
     height: 80vh;
     width: 160%;
@@ -465,6 +496,15 @@ a{
         &--down{
             margin-top: 72px;
         }
+    }
+
+    &__quote::before{
+        content: "“";
+        margin-left: -5px;
+    }
+
+    &__quote::after{
+        content: "”";
     }
 }
 
