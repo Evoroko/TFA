@@ -166,6 +166,17 @@ if(title){
     })
 }
 
+const spoilers = document.querySelectorAll('.spoiler');
+if(spoilers[0]){
+    for(let spoiler of spoilers){
+        spoiler.addEventListener("click", () => {
+            setTimeout(function() {
+                ScrollTrigger.refresh();
+              }, 10);
+        })
+    }
+}
+
 
 function horizontalScroll(cible, length) {
     gsap.to(`${cible}`, {

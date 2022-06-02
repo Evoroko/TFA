@@ -49,14 +49,24 @@ a{
 }
 
 .dlbtn{
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: inline-block;
-    width: 100%;
-    padding: 27px 0px;
-    background-image: url(../assets/images/dl.svg);
+    display: flex;
 
-    &--txt{
+    &__el{
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: inline-block;
+        width: 100%;
+        padding: 30px 0px;
+        max-width: 200px;
+        margin-right: 18px;
+        transition: 0.3s;
+
+        &:hover{
+            transform: scale(110%);
+        }
+    }
+
+    &__txt{
         position: absolute;
 	    white-space: nowrap;
 	    text-indent: 100%;
@@ -66,10 +76,19 @@ a{
     &--last{
         padding: 24px;
         background-position: center;
+        justify-content: center;
     }
 
     &--cs{
         background-position: center;
+    }
+
+    &--apple{
+        background-image: url(../assets/images/appstore.svg);
+    }
+
+    &--google{
+        background-image: url(../assets/images/googleplay.svg);
     }
 }
 
@@ -81,7 +100,7 @@ a{
     max-width: 1500px;
     margin: auto;
 
-    @media (min-width: 992px){
+    @media (min-width: 1050px){
         height: 100vh;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -97,7 +116,7 @@ a{
         margin: auto;
         display: block;
 
-        @media (min-width: 992px){
+        @media (min-width: 1050px){
             margin-top: 0;
         }
     }
@@ -111,7 +130,7 @@ a{
         flex-direction: column;
         align-items: center;
         
-        @media (min-width: 992px){
+        @media (min-width: 1050px){
             margin-top: 0;
             justify-content: center;
             align-items: flex-start;
@@ -130,7 +149,7 @@ a{
             height: 100%;
         }
 
-        @media (min-width: 992px){
+        @media (min-width: 1050px){
             max-height: none;
             
             img{
@@ -148,7 +167,15 @@ a{
 
     &__el{
         margin-bottom: 18px;
-        max-width: 800px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media (min-width: 1050px){
+            max-width: none;
+            margin-left: 0;
+            margin-right: 0;
+        }
 
         &--center{
             text-align: center;
@@ -160,6 +187,7 @@ a{
 
         &>*{
             margin: 0 auto 18px auto;
+            max-width: 95ch;
         }
 
         &--nomax{
@@ -168,7 +196,7 @@ a{
 
         &--nomargin{
 
-            @media (min-width: 992px){
+            @media (min-width: 1050px){
                 margin: 0;
             }
         }
@@ -208,7 +236,7 @@ a{
         margin: 0 auto 18px auto;
         font-size: var(--subtitle);
         
-        @media (min-width: 992px){
+        @media (min-width: 1050px){
             text-align: center;
         }
     }
@@ -228,6 +256,7 @@ a{
     &--full{
         width: 100%;
         max-width: 400px;
+        margin: auto;
     }
 
     &--bg{
@@ -317,7 +346,7 @@ a{
         height: 100%;
     }
 
-    @media (min-width: 992px){
+    @media (min-width: 1050px){
         width: 100%;
         height: auto;
         overflow-x: hidden;
@@ -332,8 +361,17 @@ a{
 
     }
 }
+        
 
-@media(min-width: 992px){
+.horizontal__section{
+    margin-bottom: 72px;
+
+    @media (min-width: 1050px){
+        margin-bottom: 0;
+    }
+}
+
+@media(min-width: 1050px){
 
     .horizontal{
         display: flex;
@@ -341,12 +379,6 @@ a{
         height: 100vh;
         overflow-x: hidden;
         align-items: center;
-        
-
-        .section{
-            width: 100vw;
-            margin-bottom: 0;
-        }
 
         &__img{
             grid-row: 1 / 2 span;
@@ -362,10 +394,6 @@ a{
             max-width: 600px;
             margin-right: auto;
             margin-left: auto;
-
-            *{
-                margin: 0;
-            }
         }
 
         &--cs{
@@ -395,7 +423,7 @@ a{
         padding: 18px;
         width: 100%;
 
-        @media (min-width: 992px){
+        @media (min-width: 1050px){
             padding: 72px;
         }
 
@@ -440,7 +468,7 @@ a{
         background-image: url(../assets/images/gallery@2x.png);
     }
 
-    @media(min-width: 992px){
+    @media(min-width: 1050px){
         width: 120%;
         background-size: auto 100%;
         height: 100vh;
@@ -457,7 +485,7 @@ a{
     margin-right: auto;
     height: 100%;
 
-    @media (min-width: 992px){
+    @media (min-width: 1050px){
         height: 90%;
     }
 
@@ -492,7 +520,7 @@ a{
         }
     }
 
-    @media (min-width: 992px){
+    @media (min-width: 1050px){
         &--down{
             margin-top: 72px;
         }
@@ -560,7 +588,7 @@ a{
         }
     }
 
-    @media (min-width: 992px){
+    @media (min-width: 1050px){
         flex-direction: row;
         justify-content: space-between;
 
@@ -576,6 +604,55 @@ a{
     &__el{
         margin: 0 18px;
 
-        
+        &--active{
+            border-bottom: 2px solid var(--c-third);
+        }
+    }
+}
+
+.color{
+    display: flex;
+    flex-direction: column;
+
+    @media(min-width: 1050px){
+        flex-direction: row;
+        margin: 0;
+    }
+
+    &__el{
+        width: 100px;
+        height: 100px;
+
+        &--01{
+            background-color: var(--c-primary);
+        }
+        &--02{
+            background-color: var(--c-secondary);
+        }
+        &--03{
+            background-color: var(--c-third);
+        }
+        &--04{
+            background-color: var(--c-fourth);
+        }
+
+        @media(min-width: 1050px){
+            margin-right: 18px;
+        }
+    
+    }
+}
+
+.section--desktop{
+    display: none;
+}
+
+@media(min-width: 1050px){
+    .section--desktop{
+        display: block;
+    }
+
+    .section--mobile{
+        display: none;
     }
 }

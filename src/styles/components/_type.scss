@@ -38,6 +38,10 @@
         content: "";
         top: -20px;
         left: -28px;
+
+        @media (min-width: 992px){
+            top: -13px;
+        }
     }
 
     &--break{
@@ -63,6 +67,7 @@
         background-position: center top;
         background-size: 72px;
         padding-top: 81px;
+        margin-bottom: 18px;
 
         &--chat{
             background-image: url(../../assets/images/title_chat.svg);
@@ -97,10 +102,16 @@
             top: -72px;
         }
     }
+
+    &--credits{
+        margin-top: 72px;
+        margin-bottom: 72px;
+    }
     
 }
 
 .caption{
     font-size: 14px;
+    text-align: center;
 }
 

@@ -1,18 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>CommiMe — The first artist-friendly commission app without fee.</title>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="">
-  <!-- Meta Partage -->
-  <!-- Favicon -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The first artist-friendly commission app without fee.">
 
-  <link rel="stylesheet" href="styles/app.css">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@blurry_winter">
+    <meta name="twitter:title" content="CommiMe">
+    <meta name="twitter:description" content="The first artist-friendly commission app without fee.">
+    <meta name="twitter:image" content="http://nell-maissin.be/projets/tfa/assets/images/twitter_image.jpg">
+    
+    <meta property="og:site_name" content="CommiMe" />
+    <meta property="og:title" content="CommiMe" />
+    <meta property="og:description" content="The first artist-friendly commission app without fee." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://nell-maissin.be/projets/tfa/index.html" />
+    <meta property="og:image" content="http://nell-maissin.be/projets/tfa/assets/images/og_image.jpg"/>
+    <meta property="og:image:width" content="1800">
+    <meta property="og:image:height" content="945">
 
-  <script src="scripts/main.js" defer></script>
+    <link rel="icon" href="assets/images/favicon.ico" sizes="any">
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+
+    <title>CommiMe — The first artist-friendly commission app without fee.</title>
+
+    <link rel="stylesheet" href="styles/app.css">
+
+    <script src="scripts/main.js" defer></script>
 </head>
 <body class="body">
 
@@ -23,13 +42,10 @@
       <h1 class="logo d-grid-start01 d-grid-end03"><span class="logo--txt">CommiMe</span></h1>
       <div class="topSection--title d-grid-start01 d-grid-end07 content__el">
         <h2 class="title title--left title--top content__el--top">The first <span class="title--break">artist-friendly</span> commission app without&nbsp;fee.</h2>
-        <p class="content__el--top content__sec">You don't believe us? Try it now.</p>
-        <div class="section__el content__el--top">
-          <a  class="dlbtn section__el"
-              target="_blank"
-              href="https://www.figma.com/proto/afLBaLqgy3Rfox4u5FPXXE/TFA-%E2%80%94-Prototype-final?node-id=1%3A5&scaling=scale-down&page-id=0%3A1&starting-point-node-id=7%3A44">
-              <span class="dlbtn--txt">Prototype Figma</span>
-          </a>
+        <p class="content__el--top content__sec">You don’t believe us? Try it now.</p>
+        <div class="dlbtn">
+          <a class="dlbtn__el dlbtn--apple" target="_blank" href="https://www.figma.com/proto/afLBaLqgy3Rfox4u5FPXXE/TFA-%E2%80%94-Prototype-final?node-id=1%3A5&scaling=scale-down&page-id=0%3A1&starting-point-node-id=7%3A44"><span class="dlbtn__txt">Prototype Figma</span></a>
+          <a class="dlbtn__el dlbtn--google" target="_blank" href="https://www.figma.com/proto/afLBaLqgy3Rfox4u5FPXXE/TFA-%E2%80%94-Prototype-final?node-id=1%3A5&scaling=scale-down&page-id=0%3A1&starting-point-node-id=7%3A44"><span class="dlbtn__txt">Prototype Figma</span></a>
         </div>
       </div>
     </div>
@@ -39,7 +55,7 @@
 
   <section class="section">
     <div class="content content__sec">
-      <h3 class="content__el title d-grid-start03 d-grid-end11"><span class="title--underline title--new">New artists</span> are put forward.</h3>
+      <h3 class="content__sec title d-grid-start03 d-grid-end11"><span class="title--underline title--new">New artists</span> are put forward.</h3>
       <p class="content__el d-grid-start04 d-grid-end10">Are you tired of your lack of visibility? Do you want to find and support artists beginning in the commission field? Then CommiMe is made for you. You will find a category made for new artists on the home screen, so that everybody can have a chance to shine.</p>
     </div>
     <div class="wrap">
@@ -49,9 +65,9 @@
 
   <div class="wrap">
     <div class="section horizontal horizontal--landing">
-      <section class="content section--noanim">
+      <section class="content section--noanim horizontal__section">
         <div class="d-grid-start06 d-grid-end12 horizontal__txt">
-          <h3 class="content__el title title__slide title__slide--custom">Custom form</h3>
+          <h3 class="title title__slide title__slide--custom">Custom form</h3>
           <p class="content__el content__el--center">Make a form that your clients can fill out to gain time and avoid the stress of the first conversation.</p>
         </div>
         <picture class="img img--bg horizontal__img d-grid-start02 d-grid-end06">
@@ -64,9 +80,9 @@
         </picture>
       </section>
   
-      <section class="content section--noanim">
+      <section class="content section--noanim horizontal__section">
         <div class="d-grid-start06 d-grid-end12 horizontal__txt">
-          <h3 class="content__el title title__slide title__slide--chat">Private chatbox</h3>
+          <h3 class="title title__slide title__slide--chat">Private chatbox</h3>
           <p class="content__el content__el--center">You miss the old-fashioned conversations on social media? No worries, you can continue them here.</p>
         </div>
         <picture class="img img--bg horizontal__img d-grid-start02 d-grid-end06">
@@ -79,9 +95,9 @@
         </picture>
       </section>
   
-      <section class="content section--noanim">
+      <section class="content section--noanim horizontal__section">
         <div class="d-grid-start06 d-grid-end12 horizontal__txt">
-          <h3 class="content__el title  title__slide title__slide--review">Review system</h3>
+          <h3 class="title  title__slide title__slide--review">Review system</h3>
           <p class="content__el content__el--center">Leave a note out of 5 stars so that other users know they can trust you.</p>
         </div>
         
@@ -120,30 +136,29 @@
   <section class="section content content__sec content--spacetop">
     <h3 class="title content__sec d-grid-start01 d-grid-end">They’re already <span class="title--underline">convinced</span>.</h3>
 
-    <blockquote class="content__el review review--down d-grid-start01 d-grid-end05">
+    <figure class="content__el review review--down d-grid-start01 d-grid-end05">
       <figcaption class="title title--small content__el review__img review__img--tasu">TasukiCrimson</figcaption>
-      <p class="review__quote">I tried many commissions platforms but none of them ever convinced me. The fee was too high, and I was drowned in the middle of popular artists, so I switched to Twitter to sell my drawing, until I discovered CommiMe. Thanks to this app, I can now easily find new clients and the process is way easier than before!</p>
-    </blockquote>
+      <blockquote class="review__quote">I tried many commissions platforms but none of them ever convinced me. The fee was too high, and I was drowned in the middle of popular artists, so I switched to Twitter to sell my drawing, until I discovered CommiMe. Thanks to this app, I can now easily find new clients and the process is way easier than before!</blockquote>
+    </figure>
     
-    <blockquote class="content__el review d-grid-start05 d-grid-end09">
+    <figure class="content__el review d-grid-start05 d-grid-end09">
       <figcaption class="title title--small content__el review__img review__img--amavocado">Amavocado</figcaption>
-      <p class="review__quote">I never dared to sell my drawings, but when I discovered CommiMe, I finally tried it. I don’t regret starting by using it — it was very intuitive and simple, I was guided all along and I didn’t have any doubt on the whole process. Now, my drawings are a part of my income.</p>
-    </blockquote>
+      <blockquote class="review__quote">I never dared to sell my drawings, but when I discovered CommiMe, I finally tried it. I don’t regret starting by using it — it was very intuitive and simple, I was guided all along and I didn’t have any doubt on the whole process. Now, my drawings are a part of my income.</blockquote>
+    </figure>
     
-    <blockquote class="content__el review review--down d-grid-start09 d-grid-end">
+    <figure class="content__el review review--down d-grid-start09 d-grid-end">
       <figcaption class="title title--small content__el review__img review__img--rener">RenerLebb</figcaption>
-      <p class="review__quote">As a commission buyer, I always found it sad that smaller artists were lacking visibilty, and even if you wanted to support them, it wasn’t an easy task to find them in the first place, but with this app, this problem was solved and I can now discover new artists every day.</p>
-    </blockquote>
+      <blockquote class="review__quote">As a commission buyer, I always found it sad that smaller artists were lacking visibilty, and even if you wanted to support them, it wasn’t an easy task to find them in the first place, but with this app, this problem was solved and I can now discover new artists every day.</blockquote>
+    </figure>
   </section>
 
   <section class="purple section">
     <div class="content content--purple purple--dl">
       <h3 class="title title--center content__el d-grid-start01 d-grid-end">Download it now.</h3>
-      <a  class="dlbtn dlbtn--last d-grid-start01 d-grid-end"
-              target="_blank"
-              href="https://www.figma.com/proto/afLBaLqgy3Rfox4u5FPXXE/TFA-%E2%80%94-Prototype-final?node-id=1%3A5&scaling=scale-down&page-id=0%3A1&starting-point-node-id=7%3A44">
-              <span class="dlbtn--txt">Prototype Figma</span>
-          </a>
+      <div class="dlbtn dlbtn--last d-grid-start01 d-grid-end">
+        <a class="dlbtn__el dlbtn--apple" target="_blank" href="https://www.figma.com/proto/afLBaLqgy3Rfox4u5FPXXE/TFA-%E2%80%94-Prototype-final?node-id=1%3A5&scaling=scale-down&page-id=0%3A1&starting-point-node-id=7%3A44"><span class="dlbtn__txt">Prototype Figma</span></a>
+        <a class="dlbtn__el dlbtn--google" target="_blank" href="https://www.figma.com/proto/afLBaLqgy3Rfox4u5FPXXE/TFA-%E2%80%94-Prototype-final?node-id=1%3A5&scaling=scale-down&page-id=0%3A1&starting-point-node-id=7%3A44"><span class="dlbtn__txt">Prototype Figma</span></a>
+      </div>
     </div>    
   </section>
 
