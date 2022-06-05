@@ -43,8 +43,14 @@ a{
     }
 
     &--cs{
-        width: 200px;
+        width: 150px;
         margin: 0 auto 18px auto;
+    }
+
+    &--absolute{
+        position: absolute;
+        left: 18px;
+        top: 18px;
     }
 }
 
@@ -75,6 +81,7 @@ a{
 
     &--last{
         padding: 24px;
+        padding-top: 18px;
         background-position: center;
         justify-content: center;
     }
@@ -315,9 +322,17 @@ a{
 .link{
     color: var(--c-third);
     transition: 0.3s;
+    position: relative;
 
     &:hover{
         color: var(--c-fourth);
+    }
+
+    &--block::before{
+        content: ">";
+        position: absolute;
+        left: -18px;
+
     }
 }
 
@@ -444,7 +459,7 @@ a{
         padding: 72px 18px;
     }
 
-    @media (min-width: 996px){
+    @media (min-width: 1050px){
 
         &__txt{
             display: flex;
@@ -460,7 +475,7 @@ a{
     height: 80vh;
     width: 160%;
     background-image: url(../assets/images/gallery@1x.png);
-    background-size: cover;
+    background-size: auto 100%;
     background-position: center;
     background-repeat: no-repeat;
 
@@ -468,7 +483,12 @@ a{
         background-image: url(../assets/images/gallery@2x.png);
     }
 
+    @media(min-width: 800px){
+        margin-left: -210px;
+    }
+
     @media(min-width: 1050px){
+        margin-left: 0;
         width: 120%;
         background-size: auto 100%;
         height: 100vh;
@@ -655,4 +675,30 @@ a{
     .section--mobile{
         display: none;
     }
+}
+
+
+
+.video{
+    width: 100%;
+    max-height: 400px;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+   
+::-webkit-scrollbar-thumb {
+    background: var(--c-primary); 
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: var(--c-third); 
 }

@@ -3,7 +3,6 @@
 import gsap from "../../node_modules/gsap";
 import ScrollTrigger from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
-gsap.config({nullTargetWarn: false});
 
 // Date copyright
 
@@ -12,42 +11,6 @@ let year = date.getFullYear();
 
 let yr = document.querySelector("#year");
 yr.innerText = year;
-
-
-// Dark Theme persistant
-
-const darkTheme = document.querySelector("#theme");
-const ball = document.querySelector("#ball");
-
-darkTheme.addEventListener("click", function(){
-    if(document.body.dataset.theme === "dark"){
-        light();
-        localStorage.setItem("theme", "light");
-    } else {
-        dark();
-        localStorage.setItem("theme", "dark");
-    } 
-});
-
-const userDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-let theme = localStorage.getItem('theme');
-if((!theme && userDark) || (theme === "dark")){
-    dark();
-} else if(theme === "light"){
-    light();
-}
-
-function dark(){
-    document.body.setAttribute("data-theme", "dark");
-    ball.classList.add("btn--ballDark");
-}
-
-function light(){
-    document.body.setAttribute("data-theme", "light");
-    ball.classList.remove("btn--ballDark");
-}
-
 
 //Slider
 //Inspiré par https://www.w3schools.com/howto/howto_js_slideshow.asp et modifié
@@ -98,16 +61,36 @@ function showSlides(n) {
     }
 }
 
-
-
-
 // Greensock
 
-var review = document.querySelector('.review--down');
+const review = document.querySelector('.review--down');
+const horizontal = document.querySelector('.horizontal');
 
-if(window.matchMedia('(min-width: 992px)').matches){
+if(window.matchMedia('(min-width: 1050px)').matches){
     horizontalScroll('.horizontal', '-200vw');
+    reviewDesktop();
+}else{
+    reviewMobile();
+}
 
+function horizontalScroll(cible, length) {
+    if(horizontal){
+        gsap.to(`${cible}`, {
+            x: `${length}`,
+            ease: "none",
+            scrollTrigger: {
+                trigger: `${cible}`,
+                pin: true,
+                start: 'center center',
+                end: '+=3000',
+                scrub: true,
+                toggleActions: 'play none reverse none'
+            }
+        });
+    }
+}
+
+function reviewDesktop(){
     if(review){
         gsap.to('.review--down', {
             y: -100,
@@ -117,7 +100,9 @@ if(window.matchMedia('(min-width: 992px)').matches){
             }
         })
     }
-}else{
+}
+
+function reviewMobile(){
     if(review) {
         gsap.from('.review',{
             x: -100,
@@ -131,7 +116,23 @@ if(window.matchMedia('(min-width: 992px)').matches){
     }
 }
 
-var sections = document.querySelectorAll('.section');
+const gallery = document.querySelector('.gallery');
+if(gallery){
+    galleryAnim();
+}
+
+function galleryAnim(){
+    gsap.to('.gallery', {
+        x: -200,
+        duration: 2,
+        scrollTrigger: {
+            trigger: '.gallery',
+            scrub: 0.8
+        }
+    })
+}
+
+const sections = document.querySelectorAll('.section');
 for (let section of sections){
     gsap.from(section, {
         y: 200,
@@ -144,20 +145,13 @@ for (let section of sections){
     })
 }
 
-var gallery = document.querySelector('.gallery');
-if(gallery){
-    gsap.to('.gallery', {
-        x: -200,
-        duration: 2,
-        scrollTrigger: {
-            trigger: '.gallery',
-            scrub: 0.8
-        }
-    })
-}
 
 var title = document.querySelector('.topSection--title');
 if(title){
+    titleAnim();
+}
+
+function titleAnim(){
     gsap.from('.content__el--top', {
         x: -200,
         opacity: 0,
@@ -175,20 +169,4 @@ if(spoilers[0]){
               }, 10);
         })
     }
-}
-
-
-function horizontalScroll(cible, length) {
-    gsap.to(`${cible}`, {
-        x: `${length}`,
-        ease: "none",
-        scrollTrigger: {
-            trigger: `${cible}`,
-            pin: true,
-            start: 'center center',
-            end: '+=3000',
-            scrub: true,
-            toggleActions: 'play none reverse none'
-        }
-    });
 }
