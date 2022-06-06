@@ -146,7 +146,7 @@ for (let section of sections){
 }
 
 
-var title = document.querySelector('.topSection--title');
+const title = document.querySelector('.topSection--titleAnim');
 if(title){
     titleAnim();
 }

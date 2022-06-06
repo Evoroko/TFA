@@ -74,6 +74,14 @@
         grid-column-end: -1;
     }
 
+    .d-grid-end-special07{
+        grid-column-end: 8;
+
+        @media (min-width: 1350px){
+            grid-column-end: 7;
+        }
+    }
+
     .d-row-start01{
         grid-row-start: 1;
     }

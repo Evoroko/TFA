@@ -122,6 +122,7 @@ a{
     &__title{
         margin: auto;
         display: block;
+        font-size: var(--bigtitle);
 
         @media (min-width: 1050px){
             margin-top: 0;
@@ -246,6 +247,10 @@ a{
         @media (min-width: 1050px){
             text-align: center;
         }
+    }
+
+    &--bold{
+        font-weight: 700;
     }
 }
 

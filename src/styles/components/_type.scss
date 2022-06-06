@@ -47,7 +47,7 @@
     &--break{
         display: block;
 
-        @media (min-width: 1050px){
+        @media (min-width: 594px){
             display: inline;
         }
     }
@@ -89,6 +89,10 @@
 
         @media(min-width: 1050px){
             max-width: none;
+        }
+
+        @media(min-width: 1549px){
+            font-size: 69px;
         }
     }
 

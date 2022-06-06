@@ -7,16 +7,30 @@
     --c-third: #af86ff;
     --c-fourth: #ddccff;
     
+
     /* TEXT */
+
     --txt: 18px;
     --subtitle: 23px;
-    --title: 35px;
+    --title: 28px;
+    --bigtitle: 43px;
+
+    @media (min-width: 370px){
+        --title: 35px;
+    }
+    
 }
 
 @media (min-width: 1050px){
     :root{
         --subtitle: 28px;
         --title: 55px;
+        --bigtitle: 55px;
     }
 }
 
+@media (min-width: 1067px){
+    :root{
+        --bigtitle: 69px;
+    }
+}
